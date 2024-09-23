@@ -1,0 +1,111 @@
+/* basic map size */
+body {
+    margin: 0
+}
+
+.container {
+    margin: 1rem;
+}
+
+#map {
+height: 80vh;
+width: 80vw;
+border: 1px solid grey;
+}
+
+/* searchbox styling */
+.tt-search-box {
+
+    width: 400px;
+    margin: 10px;
+}
+
+
+/* Example styling*/
+/* Customize compass button */
+.mapboxgl-ctrl-compass {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */
+    border-radius: 50% !important; /* Optional: Make it circular */
+  }
+
+  /* Customize zoom-in button */
+  .mapboxgl-ctrl-zoom-in {
+    background-color: rgba(0, 128, 0, 0.7) !important; /* Semi-transparent green */
+  }
+
+  /* Customize zoom-out button */
+  .mapboxgl-ctrl-zoom-out {
+    background-color: rgba(255, 0, 0, 0.7) !important; /* Semi-transparent red */
+  }
+
+  /* Submit button styling */
+  #submit-button {
+    background: #df1b12;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.15s ease-in-out;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+  }
+  
+  #submit-button:hover {
+    cursor: pointer;
+    background: #b1110e;
+  }
+  
+  #labels-container {
+    position: relative;
+    top: 60px;
+    width: 260px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 2px 2px 2px 0px;
+    z-index: 5;
+  }
+  
+  #labels-container label {
+    line-height: 2;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  #labels-container #route-labels div {
+    border-left: 6px solid;
+    padding-left: 5px;
+    margin-top: 3px;
+  }
+  
+  #route-labels div:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px #888888;
+  }
+
+  /*modal*/
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 1100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  #modal-content {
+    background-color: lightgray;
+    color: #555;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+  }

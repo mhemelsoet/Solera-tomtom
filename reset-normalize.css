@@ -1,0 +1,561 @@
+/* Universal reset */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0 solid #000;
+	border-width: 0;
+	border-style: solid;
+	border-color: #000;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+/* Make sure to set some focus styles for accessibility */
+:focus {
+	outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+/* Set consistent line-height */
+body {
+	line-height: 1;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+	list-style: none;
+}
+
+/* Remove quotes from blockquote and q elements */
+blockquote,
+q {
+	quotes: none;
+}
+
+/* Remove borders and spacing from tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Remove inner padding and search cancel button from search input */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input[type='search'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	box-sizing: content-box;
+}
+
+/* Ensure consistent behavior for textareas */
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+
+/* Correct inline-block display for media elements */
+audio,
+canvas,
+video {
+	display: inline-block;
+	zoom: 1;
+	max-width: 100%;
+}
+
+/* Hide audio without controls in modern browsers */
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/* Hide elements with hidden attribute */
+[hidden] {
+	display: none;
+}
+
+/* Set base font-size and adjust text sizing */
+html {
+	font-size: 100%; /* Prevent iOS text size adjust after orientation change */
+	text-size-adjust: 100%;
+}
+
+/* Ensure consistent outline styles for links */
+a:focus {
+	outline: thin dotted;
+}
+
+/* Improve readability for links on focus and hover */
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/* Improve image quality when scaled and remove image border */
+img {
+	border: 0 solid #000;
+	border-width: 0;
+	border-style: solid;
+	border-color: #000;
+	interpolation-mode: bicubic;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* Remove margin from figure elements */
+figure {
+	margin: 0;
+}
+
+/* Remove margin from form elements */
+form {
+	margin: 0;
+}
+
+/* Define consistent border, margin, and padding for fieldset */
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+/* Ensure legend inherits correct styles */
+legend {
+	border: 0 solid #000;
+	border-width: 0;
+	border-style: solid;
+	border-color: #000;
+	padding: 0;
+	white-space: normal;
+	margin-left: -7px;
+}
+
+/* Ensure font-size consistency for form elements */
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: middle;
+}
+
+/* Reset line-height for button and input */
+button,
+input {
+	line-height: normal;
+}
+
+/* Ensure consistent text-transform for button and select */
+button,
+select {
+	text-transform: none;
+}
+
+/* Improve usability and consistency for clickable input types */
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	-webkit-appearance: button;
+	cursor: pointer;
+	overflow: visible;
+}
+
+/* Reset cursor for disabled elements */
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+/* Adjust box-sizing and padding for checkboxes and radios */
+input[type='checkbox'],
+input[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+	height: 13px;
+	width: 13px;
+}
+
+/* Adjust appearance and box-sizing for search input */
+input[type='search'] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+
+/* Remove inner padding and search cancel button for search input */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/* Remove inner padding and border for focus on elements */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0 solid #000;
+	border-width: 0;
+	border-style: solid;
+	border-color: #000;
+	padding: 0;
+}
+
+/* Ensure consistent textarea styling */
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+/* Remove spacing between table cells */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set default text color */
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+/* Set background color for selected text */
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/* Ensure vertical alignment for images */
+img {
+	vertical-align: middle;
+}
+
+/* Reset border and padding for fieldset */
+fieldset {
+	border: 0 solid #000;
+	border-width: 0;
+	border-style: solid;
+	border-color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+/* Ensure vertical resizing for textarea */
+textarea {
+	resize: vertical;
+}
+
+/* Additional reset from 'the-new-css-reset' */
+
+/* Remove all styles except 'display' from User-Agent-Stylesheet */
+*:where(:not(html, iframe, canvas, img, svg, video, audio, svg *, symbol *)) {
+	all: unset;
+	display: revert;
+}
+
+/* Fix mobile Safari font-size increase on landscape mode */
+html {
+	text-size-adjust: none;
+}
+
+/* Reapply pointer cursor for anchor tags */
+a,
+button {
+	cursor: revert;
+}
+
+/* Remove list styles from ol, ul, menu, and summary */
+ol,
+ul,
+menu,
+summary {
+	list-style: none;
+}
+
+/* Ensure images do not exceed their container */
+img {
+	max-inline-size: 100%;
+	max-block-size: 100%;
+}
+
+/* Remove spacing between cells in tables */
+table {
+	border-collapse: collapse;
+}
+
+/* Ensure user-select for input and textarea */
+input,
+textarea {
+	user-select: auto;
+}
+
+/* Ensure white-space revert for textarea in Safari */
+textarea {
+	white-space: revert;
+}
+
+/* Allow meter element to be styled */
+meter {
+	-webkit-appearance: revert;
+	appearance: revert;
+}
+
+/* Ensure minimal style for preformatted text */
+:where(pre) {
+	all: revert;
+	box-sizing: border-box;
+}
+
+/* Reset input placeholder text opacity */
+::placeholder {
+	color: unset;
+}
+
+/* Fix hidden attribute behavior */
+:where([hidden]) {
+	display: none;
+}
+
+/* Fix contenteditable attribute bug in Chromium browsers */
+:where([contenteditable]:not([contenteditable='false'])) {
+	-moz-user-modify: read-write;
+	-webkit-user-modify: read-write;
+	overflow-wrap: break-word;
+	-webkit-line-break: after-white-space;
+	line-break: after-white-space;
+	user-select: auto;
+}
+
+/* Apply draggable feature in Chromium and Safari */
+:where([draggable='true']) {
+	-webkit-user-drag: element;
+}
+
+/* Revert modal native behavior */
+:where(dialog:modal) {
+	all: revert;
+	box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+	display: none;
+}
+
+/* Adjust line-height and text size */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-moz-tab-size: 4;
+	tab-size: 4;
+	font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+/* Section styling */
+body {
+	margin: 0;
+}
+
+main {
+	display: block;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content */
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+	color: inherit;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+	font-size: 1em;
+}
+
+/* Text-level semantics */
+a {
+	background-color: transparent;
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline dotted;
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content */
+img {
+	border-style: none;
+}
+
+/* Form elements */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+	appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+progress {
+	vertical-align: baseline;
+}
+
+[type='checkbox'],
+[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type='search'] {
+	-webkit-appearance: textfield;
+	appearance: textfield;
+	outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	appearance: button;
+}
+
+/* Interactive elements */
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+}
+
+/* Miscellaneous */
+template {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+/* Use border-box box model universally */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
